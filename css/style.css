@@ -1,53 +1,81 @@
 /* Aturan dasar untuk body */
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background-color: cornsilk;
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
     margin: 0;
     padding: 0;
+    color: #333;
 }
 
 /* Styling untuk header dan footer */
 header, footer {
     text-align: center;
     padding: 20px;
-    background-color: darkslategrey;
+    background: #007bff;
     color: white;
-}
-
-/* Styling khusus untuk header dengan class .header2 */
-.header2 h1 {
-    font-size: 2rem;
-    margin: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Styling untuk judul utama */
 .main-tittle {
     margin: 0;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 /* Styling untuk elemen main */
 main {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 40px;
     max-width: 1200px;
     margin: auto;
+    gap: 20px;
 }
 
 /* Styling untuk aside */
 aside {
-    background: cornsilk;
-    padding: 48px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     width: 45%;
 }
 
 /* Styling untuk form */
 form {
-    padding: 10px;
-    background-color: aquamarine;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: grid;
+    gap: 20px;
+}
+
+/* Styling untuk select dropdown */
+form select {
+    width: calc(100% - 20px);
+    padding: 12px 15px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    background: #fff;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+/* Hover effect untuk select dropdown */
+form select:hover {
+    border-color: #007bff;
+}
+
+/* Focus effect untuk select dropdown */
+form select:focus {
+    border-color: #007bff;
+    outline: none;
 }
 
 /* Styling untuk div di dalam form yang memiliki class .parameter */
@@ -55,116 +83,133 @@ form .parameter {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
 }
 
 /* Styling untuk h3 di dalam div dengan class .jenis-kelamin */
 form .jenis-kelamin h3 {
-    margin-bottom: 0;
+    margin: 0;
+    font-weight: 600;
 }
 
 /* Styling untuk label di dalam form */
 form div label {
     margin-left: 5px;
-    font-size: 20px;
-}
-
-/* Styling untuk input radio di dalam form */
-form input[type="radio"] {
-    margin-left: 0;
-    margin-right: 5px;
+    font-size: 16px;
 }
 
 /* Styling untuk input number di dalam form */
 form input[type="number"] {
     width: calc(100% - 20px);
-    padding: 12px 10px;
-    margin: 8px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 12px 15px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
     box-sizing: border-box;
-    font-family: monospace;
     font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+form input[type="number"]:focus {
+    border-color: #007bff;
+    outline: none;
 }
 
 /* Styling untuk container tombol di dalam form */
 .form-btn-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    gap: 10px;
 }
 
 /* Styling untuk tombol */
 .button {
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     flex: 1;
-    padding: 10px;
+    padding: 12px;
     margin: 5px;
     cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 /* Styling untuk tombol dengan background cornsilk */
 .bg-cornsilk {
-    background-color: cornsilk;
+    background: #f8f9fa;
+    color: #333;
 }
 
 /* Styling untuk tombol dengan background merah dan teks putih */
 .bg-reset {
-    background-color: red;
+    background: #dc3545;
     color: white;
 }
 
-/* Styling tambahan untuk input number yang didefinisikan dua kali */
-input[type=number] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-family: monospace;
-    font-size: 14px;
+/* Hover effect untuk tombol */
+.button:hover {
+    transform: scale(1.05);
 }
 
 /* Styling untuk h3 di dalam div dengan class .advantages */
 .advantages h3 {
     margin-top: 20px;
-    margin-bottom: 1px;
+    margin-bottom: 10px;
+    font-weight: 600;
 }
 
 /* Styling untuk daftar dalam div dengan class .advantages */
 .advantages ul {
-    list-style-type: number;
-    padding-left: 0;
+    list-style-type: disc;
+    padding-left: 20px;
     margin: 0;
 }
 
 /* Styling untuk item di dalam daftar .advantages */
 .advantages ul li {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 /* Styling untuk h1 di dalam section */
 section h1 {
     margin: 0 0 10px 0;
     padding: 0;
+    font-size: 2rem;
+    color: #007bff;
 }
 
 /* Styling untuk p di dalam section */
 section p {
     margin: 0;
     padding: 0;
-    margin-top: 10px; 
+    margin-top: 10px;
 }
 
 /* Styling untuk footer */
 footer {
     margin-top: 20px;
-    padding: 10px;
+    padding: 15px;
 }
 
 /* Styling untuk p di dalam footer */
 footer p {
     margin: 0;
+    font-size: 14px;
+}
+
+/* Responsive styling */
+@media(max-width: 1024px) {
+    main {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    aside {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media(max-width: 480px) {
+    .button {
+        font-size: 14px;
+    }
 }

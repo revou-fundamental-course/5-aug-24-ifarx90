@@ -11,7 +11,7 @@
     <header class="header1">
         <h1 class="main-tittle">Kalkulator BMI</h1>
     </header>
-    <!-- header end -->
+
 
     <!-- konten -->
     <main>
@@ -21,33 +21,41 @@
             <article>
                 <p>Berat badan ideal merupakan idaman setiap orang. Tak hanya memiliki bentuk tubuh yang menunjang penampilan, berat badan yang ideal juga menandakan kondisi tubuh yang sehat. bagaimana denganmu Yuk, hitung sekarang di kalkulator BMI.</p>
             </article>
-            <!-- artikel pertama end -->
+
 
             <!-- form kalkulator BMI -->
             <form>
                 <div class="jenis-kelamin">
                     <h3>Jenis Kelamin</h3>
-                    <input type="radio" id="laki-laki" name="jenis-kelamin" value="laki-laki"><label for="laki-laki">laki-laki</label>
-                    <input type="radio" id="perempuan" name="jenis-kelamin" value="laki-laki"><label for="perempuan">perempuan</label>
+                    <select id="jenis-kelamin" name="jenis-kelamin">
+                        <option value="" id="none" disabled selected>Pilih jenis kelamin</option>
+                        <option value="laki-laki">Laki-laki</option>
+                        <option value="perempuan">Perempuan</option>
+                    </select>
                 </div>
 
                 <div class="parameter">
                     <h3>Berat Badan (kg)</h3>
-                    <input type="number">
+                    <input type="number" id="input-bb">
                 </div>
 
                 <div class="parameter">
                     <h3>Tinggi Badan (cm)</h3>
-                    <input type="number">
+                    <input type="number" id="input-tb">
+                </div>
+
+                <div class="parameter">
+                    <h3>umur</h3>
+                    <input type="number" id="input-usia">
                 </div>
 
                 <div class="form-btn-container">
-                    <button class="button bg-cornsilk">Hitung BMI</button>
+                    <button class="button bg-cornsilk" type="button" onclick="formValidate()">Hitung BMI</button>
                     <button class="button bg-reset">Reset</button>
                 </div>
             </form>
-            <!-- form kalkulator BMI end -->
 
+            
             <!-- artikel kedua -->
             <article>
                 <!-- informasi 1 -->
@@ -55,8 +63,8 @@
                     <h2>Form Information</h2>
                     <p>Kalkulator ini hanya boleh digunakan oleh orang dewasa (wanita hamil atau menyusui tidak boleh mengandalkan pembacaan BMI ini) dan tidak ada tindakan yang harus diambil berdasarkan nilainya selain berkonsultasi dengan orang yang memenuhi syarat seperti dokter.</p>
                 </div>
-                <!-- informasi 1 end -->
-
+                
+                
                 <!-- informasi 2 -->
                 <div class="advantages">
                     <h3>Keunggulan</h3>
@@ -68,29 +76,34 @@
                         <li>Memberikan saran kesehatan dasar berdasarkan hasil BMI</li>
                     </ul>
                 </div>
-                <!-- informasi 2 end -->
-            </article>
-            <!-- artikel kedua end -->
-        </aside>
-        <!-- aside pertama end -->
 
+            </article>
+
+        </aside>
+        
+        
         <!-- aside kedua -->
         <aside>
+            <!-- hasil BMI -->
+             <div id="result"></div>
             <section>
                 <!-- informasi 3 -->
                 <h1>Kategori BMI</h1>
                 <p>Kategori BMI terdiri dari beberapa tingkatan: kurang dari 18.5 dianggap sebagai kekurangan berat badan, 18.5 hingga 24.9 adalah berat badan ideal, 25 hingga 29.9 dianggap kelebihan berat badan, dan 30 atau lebih dikategorikan sebagai obesitas. Penting untuk diingat bahwa BMI hanyalah salah satu indikator kesehatan dan tidak selalu mencerminkan kondisi tubuh secara menyeluruh.</p>
-                <!-- informasi 3 end -->
+
             </section>
         </aside>
         <!-- aside kedua end -->
     </main>
-    <!-- konten end -->
-
+    
+    
     <!-- footer -->
     <footer>
         <p>mode by Mokhamad Rafi</p>
     </footer>
-    <!-- footer end -->
+    
+    
+    <!-- script -->
+     <script src="js/script.js"></script>
 </body>
 </html>
