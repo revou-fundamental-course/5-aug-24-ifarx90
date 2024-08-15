@@ -1,11 +1,17 @@
-/* Aturan dasar untuk body */
+/* styling css */
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     background: linear-gradient(to right, #f8f9fa, #e9ecef);
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
     color: #333;
+}
+
+.container, main, aside, form {
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 /* Styling untuk header dan footer */
@@ -29,11 +35,13 @@ header, footer {
 /* Styling untuk elemen main */
 main {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     padding: 40px;
     max-width: 1200px;
     margin: auto;
     gap: 20px;
+    box-sizing: border-box;
 }
 
 /* Styling untuk aside */
@@ -43,6 +51,7 @@ aside {
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     width: 45%;
+    box-sizing: border-box;
 }
 
 /* Styling untuk form */
@@ -53,7 +62,9 @@ form {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: grid;
     gap: 20px;
+    box-sizing: border-box;
 }
+
 
 /* Styling untuk select dropdown */
 form select {
@@ -144,6 +155,7 @@ form input[type="number"]:focus {
     color: white;
 }
 
+
 /* Hover effect untuk tombol */
 .button:hover {
     transform: scale(1.05);
@@ -166,6 +178,112 @@ form input[type="number"]:focus {
 /* Styling untuk item di dalam daftar .advantages */
 .advantages ul li {
     margin-bottom: 10px;
+}
+
+/* styling untuk kotak hasil */
+.result-box {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.result-box:hover {
+    transform: scale(1.05);
+}
+
+.result-box h2{
+font-size: 2rem;
+color: #007bff;
+margin-bottom: 10px;
+}
+
+.result-box p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.result-box span {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.result-box{
+    opacity: 0;
+    animation:fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Animasi bounce */
+.bounce {
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Animasi pulse */
+.pulse {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* Animasi shake */
+.shake {
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25%, 75% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+}
+
+/* Styling untuk result box */
+.result-box {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+/* Styling untuk suggestion box */
+.suggestion-box {
+    background-color: #fffbe6;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    border-left: 5px solid #ffc107;
 }
 
 /* Styling untuk h1 di dalam section */
@@ -195,9 +313,10 @@ footer p {
     font-size: 14px;
 }
 
-/* Responsive styling */
+/* responsive desain */
+
 @media(max-width: 1024px) {
-    main {
+main {
         flex-direction: column;
         padding: 20px;
     }
@@ -208,8 +327,46 @@ footer p {
     }
 }
 
+@media(max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    button {
+        width: 100%;
+        padding: 10px;
+    }
+    main {
+        flex-direction: column;
+        padding: 15px;
+    }
+    .result-box {
+        order: -1; 
+        margin-bottom: 20px;
+    }
+    form {
+        order: 0;
+    }
+
+    aside {
+        order: 2; 
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
 @media(max-width: 480px) {
     .button {
         font-size: 14px;
     }
+    .container, main, aside, form {
+        padding: 10px;
+    }
+    .result-box, .suggestion-box {
+        margin: 10px 0;
+        font-size: 14px;
+    }
+    .form-btn-container, form select, form input[type="number"] {
+        width: 100%;
+    }
 }
+

@@ -12,7 +12,6 @@
         <h1 class="main-tittle">Kalkulator BMI</h1>
     </header>
 
-
     <!-- konten -->
     <main>
         <!-- aside pertama -->
@@ -51,10 +50,11 @@
 
                 <div class="form-btn-container">
                     <button class="button bg-cornsilk" type="button" onclick="formValidate()">Hitung BMI</button>
-                    <button class="button bg-reset">Reset</button>
+                    <button class="button bg-reset" type="button" onclick="formReset()">Reset</button>
                 </div>
             </form>
 
+            <div class="result-box"></div>
             
             <!-- artikel kedua -->
             <article>
@@ -86,14 +86,15 @@
         <aside>
             <!-- hasil BMI -->
              <div id="result"></div>
-            <section>
+             <div id="doctor-suggestion"></div>
+             <section>
                 <!-- informasi 3 -->
                 <h1>Kategori BMI</h1>
                 <p>Kategori BMI terdiri dari beberapa tingkatan: kurang dari 18.5 dianggap sebagai kekurangan berat badan, 18.5 hingga 24.9 adalah berat badan ideal, 25 hingga 29.9 dianggap kelebihan berat badan, dan 30 atau lebih dikategorikan sebagai obesitas. Penting untuk diingat bahwa BMI hanyalah salah satu indikator kesehatan dan tidak selalu mencerminkan kondisi tubuh secara menyeluruh.</p>
 
             </section>
         </aside>
-        <!-- aside kedua end -->
+
     </main>
     
     
