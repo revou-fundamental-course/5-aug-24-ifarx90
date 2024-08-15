@@ -1,3 +1,4 @@
+// Fungsi untuk menyesuaikan penempatan hasil BMI
 function adjustResultPlacement() {
     let resultContainer = document.getElementById('result');
     let resultBox = document.querySelector('.result-box');
@@ -19,13 +20,14 @@ function adjustResultPlacement() {
     }
 }
 
+// Fungsi untuk memvalidasi form input dan menghitung BMI
 function formValidate() {
     let gender = document.getElementById('jenis-kelamin').value;
     let weight = parseFloat(document.getElementById('input-bb').value);
     let height = parseFloat(document.getElementById('input-tb').value);
     let age = parseInt(document.getElementById('input-usia').value);
 
-    // elemen untuk menampilkan hasil dan pesan
+    // Elemen untuk menampilkan hasil dan pesan
     let resultContainer = document.getElementById('result');
     let bmiCategory = document.getElementById('bmi-category');
     let doctorSuggestion = document.getElementById('doctor-suggestion');
@@ -112,12 +114,6 @@ function formValidate() {
 function formReset() {
     location.reload();
 }
-
-// Panggil fungsi formValidate dan adjustResultPlacement saat halaman dimuat
-window.addEventListener('load', () => {
-    formValidate();
-    adjustResultPlacement();
-});
 
 // Panggil adjustResultPlacement saat ukuran jendela berubah
 window.addEventListener('resize', adjustResultPlacement);
